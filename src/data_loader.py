@@ -89,7 +89,7 @@ def load_task(
     Args:
         task: Either ``"image"`` or ``"sentiment"``.
         data_dir: Directory containing the CSV files. Defaults to the
-            repository-root ``data`` directory.
+            repository-root ``data/raw/`` directory.
 
     Returns:
         ``X_train``, ``y_train``, ``X_test``, and ``test_ids``. Test rows and
@@ -102,7 +102,7 @@ def load_task(
 
     config = _TASK_CONFIG[task]
     directory = (
-        Path(data_dir) if data_dir is not None else Path(__file__).resolve().parents[1] / "data"
+        Path(data_dir) if data_dir is not None else Path(__file__).resolve().parents[1] / "data" / "raw"
     )
     train_path = directory / f"{task}_train.csv"
     test_path = directory / f"{task}_test.csv"
