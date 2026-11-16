@@ -25,11 +25,14 @@ def minkowski_distance(a, b, p):
 
 
 class KNNClassifier:
-    def __init__(self, k=3, distance_fn=euclidean_distance):
+    def __init__(self, k=3, distance_fn=euclidean_distance, voting_method="majority"):
         if not isinstance(k, int) or isinstance(k, bool) or k < 1:
             raise ValueError("k must be a positive integer")
+        if voting_method not in ("majority", "weighted"):
+            raise ValueError("voting_method must be 'majority' or 'weighted'")
         self.k = k
         self.distance_fn = distance_fn
+        self.voting_method = voting_method
         self.X_train = []
         self.y_train = []
 
@@ -54,8 +57,16 @@ class KNNClassifier:
             [(distance, yi) for distance, yi in zip(distances, self.y_train)],
             key=lambda d: d[0],
         )
-        k_labels = [label for _, label in dists[:self.k]]
-        return Counter(k_labels).most_common(1)[0][0]
+        neighbours = dists[:self.k]
+        if self.voting_method == "majority":
+            k_labels = [label for _, label in neighbours]
+            return Counter(k_labels).most_common(1)[0][0]
+
+        scores = {}
+        for distance, label in neighbours:
+            weight = 1 / (distance + 1e-10)
+            scores[label] = scores.get(label, 0) + weight
+        return max(scores, key=scores.get)
 
     def predict(self, X_test):
         if len(self.X_train) == 0:
