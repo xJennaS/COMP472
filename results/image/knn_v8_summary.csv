@@ -1,0 +1,6 @@
+dataset,version,k,distance_metric,voting_method,normalized,training_samples,validation_samples,validation_accuracy,prediction_time_seconds
+image,V8,1,euclidean,majority,False,8000,4000,0.39625,149.38300610000002
+image,V8,3,euclidean,majority,False,8000,4000,0.39175,160.46754669999999
+image,V8,5,euclidean,majority,False,8000,4000,0.37475,1047.8967348
+image,V8,10,euclidean,majority,False,8000,4000,0.33475,151.11106199999995
+image,V8,20,euclidean,majority,False,8000,4000,0.30675,216.4992182000001
