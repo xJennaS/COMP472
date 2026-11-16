@@ -4,3 +4,4 @@ V2,0.215,0.575,0.329,True,submission_v2_knn.csv,"Tested k=1, 3, 5, 10, 20; best 
 V3,0.215,0.575,,False,submission_v3_knn.csv,"Compared Euclidean, Manhattan, Minkowski p=3; best image: Euclidean; best sentiment: Euclidean."
 V4,0.215,0.575,,False,submission_v4_knn.csv,Compared original and standardized features; image: Original features; sentiment: Original features.
 V5,0.215,0.575,,False,submission_v5_knn.csv,Compared majority and weighted voting; image: majority; sentiment: majority.
+V6,0.455,0.575,0.444,True,submission_v6_knn.csv,"Tested 1000, 2000, 4000, 8000 training samples; selected image: 8000; sentiment: 1000."
