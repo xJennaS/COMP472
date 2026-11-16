@@ -10,11 +10,26 @@ def euclidean_distance(a, b):
     return np.sqrt(np.sum((a - b) ** 2, axis=-1))
 
 
+def manhattan_distance(a, b):
+    """Compute the sum of absolute feature differences."""
+    a = np.asarray(a)
+    b = np.asarray(b)
+    return np.sum(np.abs(a - b), axis=-1)
+
+
+def minkowski_distance(a, b, p):
+    """Compute the Lp distance over the feature dimension."""
+    a = np.asarray(a)
+    b = np.asarray(b)
+    return np.sum(np.abs(a - b) ** p, axis=-1) ** (1 / p)
+
+
 class KNNClassifier:
-    def __init__(self, k=3):
+    def __init__(self, k=3, distance_fn=euclidean_distance):
         if not isinstance(k, int) or isinstance(k, bool) or k < 1:
             raise ValueError("k must be a positive integer")
         self.k = k
+        self.distance_fn = distance_fn
         self.X_train = []
         self.y_train = []
 
@@ -34,7 +49,7 @@ class KNNClassifier:
 
     def _predict_one(self, x):
         # Calculate distances.
-        distances = euclidean_distance(x, self.X_train)
+        distances = self.distance_fn(x, self.X_train)
         dists = sorted(
             [(distance, yi) for distance, yi in zip(distances, self.y_train)],
             key=lambda d: d[0],
