@@ -1,0 +1,4 @@
+dataset,version,k,distance_metric,minkowski_p,voting_method,normalized,training_samples,validation_samples,validation_accuracy,prediction_time_seconds
+sentiment,V3,3,Euclidean,,majority,False,1000,200,0.575,2.0138284999999883
+sentiment,V3,3,Manhattan,,majority,False,1000,200,0.55,3.26657689999999
+sentiment,V3,3,Minkowski-3,3,majority,False,1000,200,0.555,19.033927500000004

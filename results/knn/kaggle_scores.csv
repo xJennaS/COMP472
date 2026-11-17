@@ -1,0 +1,11 @@
+version,image_validation_accuracy,sentiment_validation_accuracy,kaggle_public_score,submitted_to_kaggle,submission_filename,notes
+V1,0.21,0.575,,False,,"k=3 and 1,000 training samples per dataset."
+V2,0.215,0.575,0.329,True,submission_v2_knn.csv,"Tested k=1, 3, 5, 10, 20; best image k=1, sentiment k=3."
+V3,0.215,0.575,,False,submission_v3_knn.csv,"Compared Euclidean, Manhattan, Minkowski p=3; best image: Euclidean; best sentiment: Euclidean."
+V4,0.215,0.575,,False,submission_v4_knn.csv,Compared original and standardized features; image: Original features; sentiment: Original features.
+V5,0.215,0.575,,False,submission_v5_knn.csv,Compared majority and weighted voting; image: majority; sentiment: majority.
+V6,0.455,0.575,0.444,True,submission_v6_knn.csv,"Tested 1000, 2000, 4000, 8000 training samples; selected image: 8000; sentiment: 1000."
+V7,0.39625,0.5066666666666667,0.455,True,submission_v7_knn.csv,"Full validation: image 4000, sentiment 2400; selected training sizes: image 8000, sentiment 8000."
+V8,0.39625,0.5629166666666666,0.480,True,submission_v8_knn.csv,"8000 training samples and full validation; selected image k=1, sentiment k=20."
+Final,,,0.567,True,submission_final_knn.csv,"Final k-NN trained on all labeled samples; image k=1 (20000 samples), sentiment k=20 (12000 samples). Parameters selected using V8 validation."
+V9,,0.585,0.562,True,submission_v9_knn.csv,"Tested sentiment k=20, 30, 50, 75, 100; selected k=75 using full validation. Full-data image predictions reused unchanged."

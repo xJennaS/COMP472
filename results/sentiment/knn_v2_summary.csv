@@ -1,0 +1,6 @@
+dataset,version,k,distance_metric,voting_method,normalized,training_samples,validation_samples,validation_accuracy,prediction_time_seconds
+sentiment,V2,1,euclidean,majority,False,1000,200,0.49,2.4357188999999977
+sentiment,V2,3,euclidean,majority,False,1000,200,0.575,1.8423814999999948
+sentiment,V2,5,euclidean,majority,False,1000,200,0.53,1.8490366000000051
+sentiment,V2,10,euclidean,majority,False,1000,200,0.525,2.0023722999999904
+sentiment,V2,20,euclidean,majority,False,1000,200,0.56,1.7317385000000058
