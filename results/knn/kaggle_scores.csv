@@ -7,3 +7,4 @@ V5,0.215,0.575,,False,submission_v5_knn.csv,Compared majority and weighted votin
 V6,0.455,0.575,0.444,True,submission_v6_knn.csv,"Tested 1000, 2000, 4000, 8000 training samples; selected image: 8000; sentiment: 1000."
 V7,0.39625,0.5066666666666667,0.455,True,submission_v7_knn.csv,"Full validation: image 4000, sentiment 2400; selected training sizes: image 8000, sentiment 8000."
 V8,0.39625,0.5629166666666666,0.480,True,submission_v8_knn.csv,"8000 training samples and full validation; selected image k=1, sentiment k=20."
+Final,,,0.567,True,submission_final_knn.csv,"Final k-NN trained on all labeled samples; image k=1 (20000 samples), sentiment k=20 (12000 samples). Parameters selected using V8 validation."
