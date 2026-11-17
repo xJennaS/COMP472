@@ -1,0 +1,3 @@
+version,dataset,samples,features,k,seed,max_iter,normalized,iterations,inertia,purity,fit_time_seconds
+V3,sentiment,1000,768,3,42,100,False,19,26325.122315120047,0.387,0.6950766000000002
+V3,sentiment,1000,768,3,42,100,True,36,717839.1212106723,0.377,1.2552425000000005

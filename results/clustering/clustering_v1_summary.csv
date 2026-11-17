@@ -1,0 +1,2 @@
+version,dataset,samples,features,k,seed,max_iter,iterations,inertia,purity,fit_time_seconds
+V1,sentiment,1000,768,3,42,100,19,26325.122315120047,0.387,1.3602521000000038
