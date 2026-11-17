@@ -1,0 +1,7 @@
+normalized,cluster,negative,neutral,positive,total
+False,0,122,134,144,400
+False,1,81,123,62,266
+False,2,114,100,120,334
+True,0,126,150,153,429
+True,1,26,59,33,118
+True,2,165,148,140,453
