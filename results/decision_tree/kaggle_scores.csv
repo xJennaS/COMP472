@@ -1,0 +1,2 @@
+version,image_validation_accuracy,sentiment_validation_accuracy,kaggle_public_score,submitted_to_kaggle,submission_filename,notes
+V1,0.045,0.45,,False,,"max_depth=3, min_samples=1; 200 training examples per dataset; entropy/information gain."
