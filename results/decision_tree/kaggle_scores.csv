@@ -2,3 +2,4 @@ version,image_validation_accuracy,sentiment_validation_accuracy,kaggle_public_sc
 V1,0.045,0.45,,False,,"max_depth=3, min_samples=1; 200 training examples per dataset; entropy/information gain."
 V2,0.045,0.45,,False,,"Tested max_depth=2, 3, 5, 8; selected image depth=2, sentiment depth=3; min_samples=1, 200 training samples per dataset, entropy."
 V3,0.045,0.45,,False,,"Tested min_samples=1, 5, 10, 20, 40; image max_depth=2, sentiment max_depth=3; selected image min_samples=1, sentiment min_samples=1; 200 training samples per dataset, entropy."
+V4,0.045,0.45,,False,,"Compared entropy and Gini; selected image criterion=entropy, sentiment criterion=entropy; image max_depth=2, sentiment max_depth=3, min_samples=1, 200 training samples per dataset."
