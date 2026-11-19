@@ -1,0 +1,2 @@
+version,image_validation_accuracy,sentiment_validation_accuracy,kaggle_public_score,submitted_to_kaggle,submission_filename,notes
+V1,0.025,0.385,,False,,"5 trees; image depth=2, sentiment depth=3; sqrt features per split; min_samples=1; entropy; seed=42; original features; 200 training/200 validation per task after stratified split. No Kaggle candidate."

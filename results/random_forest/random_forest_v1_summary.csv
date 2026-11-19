@@ -1,0 +1,3 @@
+dataset,version,n_trees,max_depth,min_samples,n_features,criterion,normalized,training_samples,validation_samples,training_accuracy,validation_accuracy,oob_accuracy,fit_time_seconds,prediction_time_seconds
+image,V1,5,2,1,sqrt,entropy,False,200,200,0.09,0.025,0.02247191011235955,0.12085808417759836,0.000404624966904521
+sentiment,V1,5,3,1,sqrt,entropy,False,200,200,0.695,0.385,0.43820224719101125,0.895715583814308,0.0005089170299470425
