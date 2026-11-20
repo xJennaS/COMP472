@@ -1,0 +1,5 @@
+dataset,version,criterion,max_depth,min_samples,normalized,training_samples,validation_samples,training_accuracy,validation_accuracy,fit_time_seconds,prediction_time_seconds
+image,V4,entropy,2,1,False,200,200,0.095,0.045,3.2995784000000006,0.001040599999999614
+image,V4,gini,2,1,False,200,200,0.075,0.02,3.4803660999999995,0.0012147999999996273
+sentiment,V4,entropy,3,1,False,200,200,0.675,0.45,20.565880000000003,0.0006501999999954933
+sentiment,V4,gini,3,1,False,200,200,0.68,0.4,19.155464800000004,0.000682399999995198
