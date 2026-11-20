@@ -1,0 +1,7 @@
+dataset,version,n_trees,max_depth,min_samples,n_features,criterion,normalized,training_samples,validation_samples,training_accuracy,validation_accuracy,oob_accuracy,fit_time_seconds,prediction_time_seconds
+image,V5,20,8,1,sqrt,entropy,False,200,4000,0.99,0.0375,0.04,0.8687805000226945,0.05991333303973079
+image,V5,20,8,1,sqrt,entropy,False,400,4000,0.9625,0.0445,0.02,2.980697790859267,0.061968083027750254
+image,V5,20,8,1,sqrt,entropy,False,800,4000,0.835,0.044,0.04,11.42363520921208,0.06426604092121124
+sentiment,V5,20,8,1,sqrt,entropy,False,200,2400,1.0,0.455,0.455,4.5947769589256495,0.02816145890392363
+sentiment,V5,20,8,1,sqrt,entropy,False,400,2400,0.995,0.49333333333333335,0.425,19.947391332825646,0.03320229100063443
+sentiment,V5,20,8,1,sqrt,entropy,False,800,2400,0.9925,0.4979166666666667,0.47875,75.54478050000034,0.036639667116105556
