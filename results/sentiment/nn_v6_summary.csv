@@ -1,0 +1,4 @@
+version,task,epochs,best_epoch,config,parameters,training_time_seconds,prediction_time_seconds,best_val_accuracy,final_train_accuracy,train_val_gap
+6,sentiment,5,3,hidden_sizes=[64]; activation=relu; optimizer=adam; learning_rate=0.001; batch_size=32; normalized=true; training_samples=1000; validation_samples=200,49411,0.44216260002576746,0.0022865000064484775,0.61,0.882,0.272
+6,sentiment,15,3,hidden_sizes=[64]; activation=relu; optimizer=adam; learning_rate=0.001; batch_size=32; normalized=true; training_samples=1000; validation_samples=200,49411,1.0076989000081085,0.0031203999824356288,0.61,0.882,0.272
+6,sentiment,30,3,hidden_sizes=[64]; activation=relu; optimizer=adam; learning_rate=0.001; batch_size=32; normalized=true; training_samples=1000; validation_samples=200,49411,1.9166864000144415,0.002998599986312911,0.61,0.882,0.272

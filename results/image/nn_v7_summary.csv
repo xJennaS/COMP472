@@ -1,0 +1,3 @@
+version,task,activation,epochs,best_epoch,config,parameters,training_time_seconds,prediction_time_seconds,best_val_accuracy,final_train_accuracy,train_val_gap
+7,image,relu,30,26,hidden_sizes=[64]; activation=relu; optimizer=adam; learning_rate=0.001; batch_size=32; normalized=true; training_samples=1000; validation_samples=200,35314,11.6622077000211,0.009071400010725483,0.15,1.0,0.85
+7,image,tanh,30,6,hidden_sizes=[64]; activation=tanh; optimizer=adam; learning_rate=0.001; batch_size=32; normalized=true; training_samples=1000; validation_samples=200,35314,4.363404300005641,0.0060415999905671924,0.135,0.913,0.778

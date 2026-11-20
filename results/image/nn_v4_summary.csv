@@ -1,0 +1,2 @@
+version,task,config,parameters,training_time_seconds,prediction_time_seconds,best_val_accuracy,final_train_accuracy,train_val_gap
+4,image,"hidden_sizes=[1024, 1024]; optimizer=adam; learning_rate=0.001; batch_size=256; momentum=0.9; dropout=0.0; weight_decay=0.001; early_stopping=False; patience=6; activation=relu",1613874,61.64603179998812,0.1108576999977231,0.38875,1.0,0.6112500000000001
