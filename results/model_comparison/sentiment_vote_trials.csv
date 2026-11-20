@@ -1,0 +1,3 @@
+candidate,correct_count,count,accuracy,role
+NN V3,1639,2400,0.6829166666666666,primary
+NN V1 + NN V3 + NN V4,1643,2400,0.6845833333333333,exploratory only
