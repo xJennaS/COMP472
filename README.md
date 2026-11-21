@@ -25,16 +25,7 @@ All models load and split the data with `src/data_loader.py` (seed 42).
 
 ## Neural network versions
 
-| Version | What it tests |
-|---|---|
-| V1 | Baseline network |
-| V2 | Learning rate and batch size |
-| V3 | Dropout, weight decay and early stopping |
-| V4 | Hidden layer width and depth |
-| V6 | Number of epochs |
-| V7 | ReLU vs Tanh |
-| V8 | Training set size |
-| V9 | Regularization on the image network |
+
 
 V1 to V4 build on each other, so each one runs the earlier versions first. You
 can also run them from the terminal with `python run_experiments.py`.
