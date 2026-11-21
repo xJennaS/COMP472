@@ -1,0 +1,5 @@
+candidate,correct_count,validation_samples,validation_accuracy,setting
+V2 raw k-NN,2077,4000,0.51925,Original features; k=1; 16000 training images
+V3 raw conditional vote,2102,4000,0.5255,Original features; NN V3/V4 agreement above the distance cutoff
+V4 transformed k-NN,2252,4000,0.563,Square root and row L2 normalization; k=1; 16000 training images
+V4 transformed conditional vote,2290,4000,0.5725,Transformed features; NN V3/V4 agreement at or above the 85th percentile of the first 2000 validation distances

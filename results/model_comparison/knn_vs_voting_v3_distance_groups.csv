@@ -1,0 +1,4 @@
+validation_group,validation_samples,baseline_correct_count,new_correct_count,changed_count,gained_correct_predictions,nn_agreement_distance_cases
+All,4000,2077,2102,201,25,237
+0..1999,2000,1005,1021,107,16,122
+2000..3999,2000,1072,1081,94,9,115

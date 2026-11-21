@@ -1,0 +1,3 @@
+candidate,correct_count,validation_samples,validation_accuracy,setting
+k-NN 16k,2077,4000,0.51925,"k=1, Euclidean distance, 16000 training images, no normalization"
+Conditional vote V3,2102,4000,0.5255,Use NN V3 and V4 agreement at or above the 85th percentile of the first 2000 validation distances; otherwise k-NN

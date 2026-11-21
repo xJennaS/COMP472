@@ -1,0 +1,5 @@
+candidate,training_samples_knn,correct_count,validation_samples,validation_accuracy,source
+k-NN V8 (8k),8000,1585,4000,0.39625,results/image/knn_v8_validation.csv
+Voting V1 (8k k-NN),8000,1763,4000,0.44075,results/model_comparison/image_voted_validation.csv
+k-NN (16k),16000,2077,4000,0.51925,V2 experiment
+Four-model vote (16k k-NN),16000,1930,4000,0.4825,V2 experiment

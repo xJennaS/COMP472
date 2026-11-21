@@ -1,0 +1,5 @@
+candidate,correct_count,count,accuracy
+k-NN V8,1585,4000,0.39625
+NN V4,1555,4000,0.38875
+k-NN + NN V3 + NN V4,1722,4000,0.4305
+k-NN + NN V2 + NN V3 + NN V4,1763,4000,0.44075

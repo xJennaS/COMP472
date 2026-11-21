@@ -1,0 +1,5 @@
+positions,candidate,correct_count,count,accuracy
+0..1999,k-NN V8,778,2000,0.389
+0..1999,Four-way vote,865,2000,0.4325
+2000..3999,k-NN V8,807,2000,0.4035
+2000..3999,Four-way vote,898,2000,0.449

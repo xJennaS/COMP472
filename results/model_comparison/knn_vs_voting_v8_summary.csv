@@ -1,0 +1,6 @@
+candidate,correct_count,validation_samples,validation_accuracy
+V5 conditional,2306,4000,0.5765
+V6 conditional,2350,4000,0.5875
+V7 conditional,2363,4000,0.59075
+V8 weighted k-NN,2312,4000,0.578
+V8 conditional,2387,4000,0.59675
