@@ -100,7 +100,7 @@ def analyze(root: Path) -> None:
         title="Neural-network validation accuracy by version",
         xlabel="Version",
         ylabel="Validation accuracy",
-        xticks=[1, 2, 3, 4, 5],
+        xticks=[1, 2, 3, 4],
     )
     axis.grid(alpha=0.25)
     axis.legend()
@@ -120,7 +120,9 @@ def analyze(root: Path) -> None:
 
     sentiment_path = result_dir / "sentiment" / "nn_v4_validation.csv"
     if sentiment_path.is_file():
-        sentiment_predictions = pd.read_csv(sentiment_path)
+        sentiment_predictions = pd.read_csv(sentiment_path).rename(
+            columns={"actual_label": "true_label"}
+        )
         report = classification_report(
             sentiment_predictions["true_label"],
             sentiment_predictions["predicted_label"],

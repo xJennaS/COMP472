@@ -1,70 +1,45 @@
-# Neural network experiments
+# COMP 472 Project
 
-The neural network code uses the functions in `src.data_loader` to load the
-data, split it into training and validation sets, and standardize it. The split
-always uses seed 42. I picked the settings in every version using the
-validation results only. The test data is only used to make the final
-predictions.
+## Setup
 
-To install the packages:
+Put the Kaggle CSV files in `data/`, then install the packages:
 
 ```powershell
 python -m pip install -r requirements.txt
 ```
 
-To run versions 1 to 4 for both tasks (it uses the GPU if there is one):
+## How to run
 
-```powershell
-python run_experiments.py
-```
+Open a notebook in `notebooks/` and run all cells. Every notebook runs on its
+own except neural network V1 to V4 (see below).
 
-Some other ways to run it:
+| Model | Notebooks | Code |
+|---|---|---|
+| k-NN | `knn_experiments.ipynb` (V1), `knn_v2` to `knn_v9`, `knn_final.ipynb` | `src/models/knn.py` |
+| Decision tree | `decision_tree_v1` to `decision_tree_v5` | `src/models/decision_tree.py` |
+| Random forest | `random_forest_v1` to `random_forest_v5`, `random_forest_final.ipynb` | `src/models/random_forest.py` |
+| Clustering | `clustering_v1` to `clustering_v3` | `src/models/clustering.py` |
+| Neural network | `neural_network_v1` to `v4`, `v6` to `v9` | `src/neural_net.py` |
 
-```powershell
-python run_experiments.py --task image --version 3 --epochs 20 --device cpu
-python run_experiments.py --task sentiment --version 4 --device cuda
-```
+All models load and split the data with `src/data_loader.py` (seed 42).
 
-`--version N` runs versions 1 to N in order, because each version starts from
-the settings the previous one picked. `--epochs` is the most epochs each
-validation run can train for (V3 can stop earlier because of early stopping).
-For the final predictions, the model is trained again on the training and
-validation data together, for the number of epochs that did best on
-validation.
+## Neural network versions
 
-What each version changes:
+| Version | What it tests |
+|---|---|
+| V1 | Baseline network |
+| V2 | Learning rate and batch size |
+| V3 | Dropout, weight decay and early stopping |
+| V4 | Hidden layer width and depth |
+| V6 | Number of epochs |
+| V7 | ReLU vs Tanh |
+| V8 | Training set size |
+| V9 | Regularization on the image network |
 
-- V1: the baseline network.
-- V2: the learning rate and the batch size, one at a time.
-- V3: dropout and weight decay, one at a time.
-- V4: the number of neurons per hidden layer and the number of hidden layers,
-  one at a time.
+V1 to V4 build on each other, so each one runs the earlier versions first. You
+can also run them from the terminal with `python run_experiments.py`.
 
-The results are saved the same way as the k-NN results. Each task has
-`results/<task>/nn_vN_summary.csv` and `nn_vN_validation.csv`. The combined
-summary and the accuracy plots are in `results/nn/`. When both tasks are run,
-it also makes `submission/nn/submission_vN_nn.csv` in the same ID order as the
-sample submission.
+## Output
 
-To make the confusion and F1 tables for the report after running the
-experiments:
-
-```powershell
-python -m src.analysis_nn
-```
-
-These tables are saved in `results/nn/`. If my teammates'
-validation files are in `predictions/`, it also compares which examples each
-model got wrong.
-
-### Running a version from its notebook
-
-Each version from `notebooks/neural_network_v1.ipynb` to
-`notebooks/neural_network_v4.ipynb` can be run on its own in Jupyter or VS Code.
-You can set `TASK`, `EPOCHS` and `DEVICE` at the top. Versions 2 to 4 run the
-earlier versions first so they start from the right settings.
-
-Versions 6 to 9 are separate notebooks
-(`notebooks/neural_network_v6_epoch_experiments.ipynb` to
-`notebooks/neural_network_v9_regularization_experiments.ipynb`) and each one
-runs by itself.
+- `results/<model>/` and `results/<task>/`: summaries and validation predictions
+- `submission/<model>/`: Kaggle submission files
