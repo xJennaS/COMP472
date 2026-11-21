@@ -1,0 +1,5 @@
+candidate,correct_count,validation_samples,validation_accuracy,setting
+V4 square-root k-NN,2252,4000,0.563,Square root then row L2 normalization; k=1; 16000 training images
+V4 conditional vote,2290,4000,0.5725,V4 features with NN V3/V4 agreement at the distance cutoff
+V5 half-centered k-NN,2284,4000,0.571,"Square root, subtract half the training feature mean, then row L2 normalization; k=1"
+V5 conditional vote,2306,4000,0.5765,V5 features with NN V3/V4 agreement at or above the 85th percentile of the first 2000 validation distances

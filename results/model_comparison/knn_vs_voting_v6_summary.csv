@@ -1,0 +1,4 @@
+candidate,correct_count,validation_samples,validation_accuracy
+V4 conditional,2290,4000,0.5725
+V5 conditional,2306,4000,0.5765
+V6 distance-gap conditional,2350,4000,0.5875

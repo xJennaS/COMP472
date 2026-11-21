@@ -1,0 +1,17 @@
+task,model,accuracy,correct_count,count,source
+image,knn_v8,0.39625,1585,4000,results/image/knn_v8_validation.csv
+image,nn_v2,0.33775,1351,4000,results/image/nn_v2_validation.csv
+image,nn_v3,0.338,1352,4000,results/image/nn_v3_validation.csv
+image,nn_v4,0.38875,1555,4000,results/image/nn_v4_validation.csv
+image,nn_v8,0.29525,1181,4000,results/image/nn_v8_validation.csv
+image,nn_v9,0.38875,1555,4000,results/image/nn_v9_validation.csv
+image,decision_tree_v5,0.041,164,4000,results/decision_tree/decision_tree_v5_image_validation.csv
+image,random_forest_v5,0.0445,178,4000,results/random_forest/random_forest_v5_image_validation.csv
+sentiment,nn_v1,0.6654166666666667,1597,2400,results/sentiment/nn_v1_validation.csv
+sentiment,nn_v2,0.675,1620,2400,results/sentiment/nn_v2_validation.csv
+sentiment,nn_v3,0.6829166666666666,1639,2400,results/sentiment/nn_v3_validation.csv
+sentiment,nn_v4,0.6791666666666667,1630,2400,results/sentiment/nn_v4_validation.csv
+sentiment,knn_v9,0.585,1404,2400,results/sentiment/knn_v9_validation.csv
+sentiment,nn_v8,0.6733333333333333,1616,2400,results/sentiment/nn_v8_validation.csv
+sentiment,decision_tree_v5,0.41375,993,2400,results/decision_tree/decision_tree_v5_sentiment_validation.csv
+sentiment,random_forest_v5,0.4979166666666667,1195,2400,results/random_forest/random_forest_v5_sentiment_validation.csv
