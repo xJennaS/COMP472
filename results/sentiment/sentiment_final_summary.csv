@@ -1,0 +1,5 @@
+method,approach,correct_count,validation_samples,validation_accuracy,best_epoch,training_run,training_noise,neutral_adjustment,class_0_accuracy,class_1_accuracy,class_2_accuracy,first_half_correct,last_half_correct,corrected_mistakes,new_mistakes,changed_labels,combined_validation_accuracy,selected
+A,Baseline,1638,2400,0.6825,12,A,False,False,0.7875,0.54875,0.71125,818,820,29,30,70,0.639625,False
+B,Training noise,1641,2400,0.68375,12,B,True,False,0.79,0.54875,0.7125,821,820,30,28,69,0.64025,True
+C,Neutral adjustment,1638,2400,0.6825,12,A,False,True,0.78375,0.55875,0.705,818,820,33,34,78,0.639625,False
+D,Noise + neutral adjustment,1636,2400,0.6816666666666666,12,B,True,True,0.78125,0.56125,0.7025,815,821,31,34,77,0.6392083333333334,False
